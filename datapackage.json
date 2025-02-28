@@ -1,0 +1,46 @@
+{
+  "resources": [
+    {
+      "name": "henry_hub_full_week_prices",
+      "type": "table",
+      "path": "henry_hub_full_week_prices.csv",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "Date",
+            "type": "string"
+          },
+          {
+            "name": "Price",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "henry_hub_monthly_prices",
+      "type": "table",
+      "path": "henry_hub_monthly_prices.csv",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "Date",
+            "type": "string"
+          },
+          {
+            "name": "Price",
+            "type": "number"
+          }
+        ]
+      }
+    }
+  ]
+}
