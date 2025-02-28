@@ -4,47 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Henry Hub Natural Gas Prices</title>
-  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 <body>
   <h1>Henry Hub Natural Gas Prices</h1>
 
-  <div id="daily-chart"></div>
-  <div id="monthly-chart"></div>
+  <h2>Daily Prices</h2>
+  <img src="henry_hub_daily_prices.png" alt="Henry Hub Daily Natural Gas Prices" style="width:100%; max-width:800px;">
 
-  <script>
-    const dailySpec = {
-      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-      "description": "Henry Hub Daily Natural Gas Prices",
-      "data": {
-        "url": "henry_hub_full_week_prices.csv",
-        "format": { "type": "csv" }
-      },
-      "mark": "line",
-      "encoding": {
-        "x": { "field": "Date", "type": "temporal", "title": "Date" },
-        "y": { "field": "Price", "type": "quantitative", "title": "Price (USD)" }
-      }
-    };
-
-    const monthlySpec = {
-      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-      "description": "Henry Hub Monthly Natural Gas Prices",
-      "data": {
-        "url": "henry_hub_monthly_prices.csv",
-        "format": { "type": "csv" }
-      },
-      "mark": "line",
-      "encoding": {
-        "x": { "field": "Date", "type": "temporal", "title": "Month" },
-        "y": { "field": "Price", "type": "quantitative", "title": "Price (USD)" }
-      }
-    };
-
-    vegaEmbed("#daily-chart", dailySpec);
-    vegaEmbed("#monthly-chart", monthlySpec);
-  </script>
+  <h2>Monthly Prices</h2>
+  <img src="henry_hub_monthly_prices.png" alt="Henry Hub Monthly Natural Gas Prices" style="width:100%; max-width:800px;">
 </body>
 </html>
